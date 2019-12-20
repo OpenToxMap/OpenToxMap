@@ -1,4 +1,4 @@
-#OpenToxMap
+# OpenToxMap
 
 ![ToxMap](https://envirodatagov.org/wp-content/uploads/2019/12/Screen-Shot-2019-12-10-at-1.29.14-PM.png)
 
