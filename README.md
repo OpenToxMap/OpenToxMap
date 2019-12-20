@@ -2,13 +2,13 @@
 
 ![ToxMap](https://envirodatagov.org/wp-content/uploads/2019/12/Screen-Shot-2019-12-10-at-1.29.14-PM.png)
 
-As reported in this [blog](https://envirodatagov.org/goodbye-to-toxmap-and-our-environmental-right-to-know/)the National Library of Medicine is retiring the ToxMap site. This site combined data from multiple sources to give a detailed, up to date map of toxic releases in the US.
+As reported in this [blog](https://envirodatagov.org/goodbye-to-toxmap-and-our-environmental-right-to-know/), the National Library of Medicine is retiring the ToxMap site. This site combined data from multiple sources to give a detailed, up to date map of toxic releases in the US.
 
 This repo and organization are the central resource for building an open replacement for ToxMap so that this resource lives on.
 
 ### Tasks
 
-- [ ] Identify each of the datasets used in ToxMap
+- [ ] Identify each of the [datasets used in ToxMap](https://github.com/OpenToxMap/OpenToxMap/wiki/Datasets)
 - [ ] Find alternatives for each, preferably as a REST service or other API but failing that as data that can be downloaded and ingested into a database / API
 - [ ] Identify main functionality of the old site and prioritize features
 - [ ] Develop a front end application using open tools (React/Leaflet/OpenLayers/MapboxGL etc) to implement the most important features
