@@ -1,0 +1,7 @@
+v_tri_state_industries.ST,v_tri_state_industries.YEAR,v_tri_state_industries.TRI_NAICS_CODE,v_tri_state_industries.NAICS_DESCRIPTION,v_tri_state_industries.NUMBER_OF_CHEMICALS,v_tri_state_industries.ON_OFF_SITE_DISP_OR_OTHER_REL,v_tri_state_industries.DATA_SET,
+"HI","2017","311","NAICS 311 - Food","1","5","INFO"
+"HI","2017","332","NAICS 332 - Fabricated Metals","5","44301.06","INFO"
+"HI","2017","999","NAICS 999 - Other","10","855266.5","INFO"
+"HI","2017","4247","NAICS 4247 - Petroleum Bulk Terminals","19","10117.0141","INFO"
+"HI","2017","2211","NAICS 2211 - Electric Utilities","21","1527088.05200615319602786","INFO"
+"HI","2017","324","NAICS 324 - Petroleum","22","625236.8173397530294841075","INFO"

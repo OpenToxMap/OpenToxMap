@@ -1,0 +1,11 @@
+v_tri_state_industries.ST,v_tri_state_industries.YEAR,v_tri_state_industries.TRI_NAICS_CODE,v_tri_state_industries.NAICS_DESCRIPTION,v_tri_state_industries.NUMBER_OF_CHEMICALS,v_tri_state_industries.ON_OFF_SITE_DISP_OR_OTHER_REL,v_tri_state_industries.DATA_SET,
+"AK","2017","2122","NAICS 2122 - Metal Mining","32","1173367276.625001360068839325","INFO"
+"AK","2017","311","NAICS 311 - Food","3","0","INFO"
+"AK","2017","336","NAICS 336 - Transportation Equipment","1",".1141","INFO"
+"AK","2017","2211","NAICS 2211 - Electric Utilities","13","330351.374","INFO"
+"AK","2017","4247","NAICS 4247 - Petroleum Bulk Terminals","12","3534.347495","INFO"
+"AK","2017","2121","NAICS 2121 - Coal Mining","4","103673.55","INFO"
+"AK","2017","4246","NAICS 4246 - Chemical Wholesalers","7","690","INFO"
+"AK","2017","999","NAICS 999 - Other","13","517992.5243428864657","INFO"
+"AK","2017","324","NAICS 324 - Petroleum","20","53303.55190006134125221","INFO"
+"AK","2017","325","NAICS 325 - Chemicals","1","10","INFO"
