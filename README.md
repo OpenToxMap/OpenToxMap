@@ -8,7 +8,7 @@ This repo and organization are the central resource for building an open replace
 
 ### Tasks
 
-- [ ] Identify each of the [datasets used in ToxMap](https://github.com/OpenToxMap/OpenToxMap/wiki/Datasets)
+- [ ] Identify each of the datasets used in ToxMap
 - [ ] Find alternatives for each, preferably as a REST service or other API but failing that as data that can be downloaded and ingested into a database / API
 - [ ] Identify main functionality of the old site and prioritize features
 - [ ] Develop a front end application using open tools (React/Leaflet/OpenLayers/MapboxGL etc) to implement the most important features
