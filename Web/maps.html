@@ -76,7 +76,7 @@
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="maps.html">Maps</a>
+        <a class="nav-link" href="maps.html">Map</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="data.html" tabindex="-1" aria-disabled="true">Data Sources</a>
@@ -130,32 +130,22 @@
 <script src="https://unpkg.com/esri-leaflet@2.3.2/dist/esri-leaflet.js"  integrity="sha512-6LVib9wGnqVKIClCduEwsCub7iauLXpwrd5njR2J507m3A2a4HXJDLMiSZzjcksag3UluIfuW1KzuWVI5n/cuQ==" crossorigin=""></script>
 <!-- Esri Leaflet Geocoder -->
   <script src="https://unpkg.com/esri-leaflet-geocoder@2.3.2/dist/esri-leaflet-geocoder.js" integrity="sha512-8twnXcrOGP3WfMvjB0jS5pNigFuIWj4ALwWEgxhZ+mxvjF5/FBPVd5uAxqT8dd2kUmTVK9+yQJ4CmTmSg/sXAQ==" crossorigin=""></script>
+<!-- Application logic -->
+<script type="text/javascript" src="lib/js/configuration.js"></script>
+<script type="text/javascript" src="lib/js/mapConstructor.js"></script>
+<script type="text/javascript" src="lib/js/identify.js"></script>
+
+<!-- Initiailzation Logic -->
 <script>
-	 var mymap = L.map('mapid').setView([46.18, -99.62], 4);
-   var searchControl = L.esri.Geocoding.geosearch({
-     position: 'topright',
-     expanded: true
-   }).addTo(mymap);
-   console.log(searchControl);
-   var results = L.layerGroup().addTo(mymap);
+   //var mymap = L.map('mapid').setView([46.18, -99.62], 4);
+   buildMap('mapid', app);
+   addMapLayers(app);
+   addMapControls(app);
    var layer_TRI = L.esri.featureLayer({
                      url: 'https://geodata.epa.gov/arcgis/rest/services/OEI/FRS_INTERESTS/MapServer/23'
                    });
 
-	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-		maxZoom: 18,
-		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
-			'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-		id: 'mapbox/streets-v11'
-	}).addTo(mymap);
-
-  searchControl.on('results', function (data) {
-    results.clearLayers();
-    for (var i = data.results.length - 1; i >= 0; i--) {
-      results.addLayer(L.marker(data.results[i].latlng));
-    }
-  });
+  
 </script>
 </body>
 </html>
