@@ -1,3 +1,7 @@
-function featureIdentify(x,y){
-  console.log("Need to build identify logic");
+function featureIdentify(data){
+  if(app.firstGeocode){
+      app.firstGeocode = false
+      app.mapLayers.TRI.addTo(app.map);
+  }
+
 }

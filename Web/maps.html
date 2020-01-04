@@ -134,18 +134,11 @@
 <script type="text/javascript" src="lib/js/configuration.js"></script>
 <script type="text/javascript" src="lib/js/mapConstructor.js"></script>
 <script type="text/javascript" src="lib/js/identify.js"></script>
-
 <!-- Initiailzation Logic -->
 <script>
-   //var mymap = L.map('mapid').setView([46.18, -99.62], 4);
    buildMap('mapid', app);
    addMapLayers(app);
    addMapControls(app);
-   var layer_TRI = L.esri.featureLayer({
-                     url: 'https://geodata.epa.gov/arcgis/rest/services/OEI/FRS_INTERESTS/MapServer/23'
-                   });
-
-  
 </script>
 </body>
 </html>
