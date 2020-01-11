@@ -1,6 +1,6 @@
 import React, {useEffect, useState, useRef} from 'react';
-import {featureLayer} from 'esri-leaflet';
-
+import {featureLayer, query} from 'esri-leaflet';
+import {geosearch} from 'esri-leaflet-geocoder';
 import {
   Map,
   Marker,
@@ -14,13 +14,35 @@ export default function MapPage() {
   const position = [41.850033, -100.6500523];
   const [data, setData] = useState(null);
   const map = useRef();
+  const triUrl = 'https://geodata.epa.gov/arcgis/rest/services/OEI/FRS_INTERESTS/MapServer/23';
+  const triLayer = featureLayer({
+    url:triUrl
+  });
 
   useEffect(() => {
     if (map) {
-      featureLayer({
-        url:
-          'https://geodata.epa.gov/arcgis/rest/services/OEI/FRS_INTERESTS/MapServer/23',
+      geosearch({
+        position: 'topright',
+        useMapBounds: false,
+        expanded: true
       }).addTo(map.current.leafletElement);
+      triLayer.addTo(map.current.leafletElement);
+      //Click Identify Logic for TRI features
+
+      map.current.leafletElement.on('click', function(evt){
+        var qry = query({
+          url: triUrl
+        })
+        .nearby(evt.latlng, 5000)
+        .run(function(error, featureCollection, response){
+          if(error){
+            console.log(error);
+            return;
+          }
+          // Build response handling logic below
+          console.log(featureCollection.features);
+        });
+      });
     }
   }, [map]);
 
