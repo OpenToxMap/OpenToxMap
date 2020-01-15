@@ -1,6 +1,7 @@
 import React, {useEffect, useState, useRef} from 'react';
 import {featureLayer, query} from 'esri-leaflet';
 import {geosearch} from 'esri-leaflet-geocoder';
+import FeatureDetails from '../components/FeatureDetails';
 import {
   Map,
   Marker,
@@ -13,6 +14,8 @@ import {
 export default function MapPage() {
   const position = [41.850033, -100.6500523];
   const [data, setData] = useState(null);
+  const [selectedFeature, setSelectedFeature] = useState(null);
+
   const map = useRef();
   const triUrl =
     'https://geodata.epa.gov/arcgis/rest/services/OEI/FRS_INTERESTS/MapServer/23';
@@ -31,19 +34,19 @@ export default function MapPage() {
       //Click Identify Logic for TRI features
 
       map.current.leafletElement.on('click', evt => {
-        debugger;
         var qry = query({
           url: triUrl,
         })
-          .nearby(evt.latlng, 5000)
+          .nearby(evt.latlng, 10000)
           .run((error, featureCollection, response) => {
-            debugger;
             if (error) {
               console.log(error);
               return;
             }
-            // Build response handling logic below
             console.log(featureCollection.features);
+            if (featureCollection.features.length > 0) {
+              setSelectedFeature(featureCollection.features[0]);
+            }
           });
       });
     }
@@ -61,6 +64,7 @@ export default function MapPage() {
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         />
       </Map>
+      {selectedFeature && <FeatureDetails feature={selectedFeature} />}
     </div>
   );
 }
