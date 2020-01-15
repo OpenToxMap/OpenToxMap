@@ -3,12 +3,12 @@ import {Link} from 'react-router-dom';
 
 export default function Nav() {
   return (
-    <nav class="nav">
+    <nav className="nav">
       <Link className="home-link" to="/">
         Open TOXMAP
       </Link>
 
-      <ul class="links">
+      <ul className="links">
         <li>
           <Link to="/map" className="nav-link">
             Map
@@ -20,7 +20,7 @@ export default function Nav() {
           </Link>
         </li>
         <li>
-          <Link to="/data" className="nav-link">
+          <Link to="/service-status" className="nav-link">
             Service Status
           </Link>
         </li>

@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^7.1.2",
     "dependencies": "0.0.1",
     "esri-leaflet": "^2.3.2",
+    "esri-leaflet-geocoder": "^2.3.2",
     "leaflet": "^1.6.0",
     "node-sass": "^4.13.0",
     "react": "^16.12.0",

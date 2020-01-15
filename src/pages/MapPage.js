@@ -14,9 +14,10 @@ export default function MapPage() {
   const position = [41.850033, -100.6500523];
   const [data, setData] = useState(null);
   const map = useRef();
-  const triUrl = 'https://geodata.epa.gov/arcgis/rest/services/OEI/FRS_INTERESTS/MapServer/23';
+  const triUrl =
+    'https://geodata.epa.gov/arcgis/rest/services/OEI/FRS_INTERESTS/MapServer/23';
   const triLayer = featureLayer({
-    url:triUrl
+    url: triUrl,
   });
 
   useEffect(() => {
@@ -24,24 +25,26 @@ export default function MapPage() {
       geosearch({
         position: 'topright',
         useMapBounds: false,
-        expanded: true
+        expanded: true,
       }).addTo(map.current.leafletElement);
       triLayer.addTo(map.current.leafletElement);
       //Click Identify Logic for TRI features
 
-      map.current.leafletElement.on('click', function(evt){
+      map.current.leafletElement.on('click', evt => {
+        debugger;
         var qry = query({
-          url: triUrl
+          url: triUrl,
         })
-        .nearby(evt.latlng, 5000)
-        .run(function(error, featureCollection, response){
-          if(error){
-            console.log(error);
-            return;
-          }
-          // Build response handling logic below
-          console.log(featureCollection.features);
-        });
+          .nearby(evt.latlng, 5000)
+          .run((error, featureCollection, response) => {
+            debugger;
+            if (error) {
+              console.log(error);
+              return;
+            }
+            // Build response handling logic below
+            console.log(featureCollection.features);
+          });
       });
     }
   }, [map]);
