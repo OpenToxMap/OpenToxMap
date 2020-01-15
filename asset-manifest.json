@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/OpenToxMap/static/css/main.7a203b56.chunk.css",
+    "main.js": "/OpenToxMap/static/js/main.7cef46b6.chunk.js",
+    "main.js.map": "/OpenToxMap/static/js/main.7cef46b6.chunk.js.map",
+    "runtime-main.js": "/OpenToxMap/static/js/runtime-main.1faf2d58.js",
+    "runtime-main.js.map": "/OpenToxMap/static/js/runtime-main.1faf2d58.js.map",
+    "static/js/2.f12323ec.chunk.js": "/OpenToxMap/static/js/2.f12323ec.chunk.js",
+    "static/js/2.f12323ec.chunk.js.map": "/OpenToxMap/static/js/2.f12323ec.chunk.js.map",
+    "index.html": "/OpenToxMap/index.html",
+    "precache-manifest.784b252922e12d5eb0446bcc54be49a7.js": "/OpenToxMap/precache-manifest.784b252922e12d5eb0446bcc54be49a7.js",
+    "service-worker.js": "/OpenToxMap/service-worker.js",
+    "static/css/main.7a203b56.chunk.css.map": "/OpenToxMap/static/css/main.7a203b56.chunk.css.map",
+    "static/js/2.f12323ec.chunk.js.LICENSE": "/OpenToxMap/static/js/2.f12323ec.chunk.js.LICENSE",
+    "static/media/logo.svg": "/OpenToxMap/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1faf2d58.js",
+    "static/js/2.f12323ec.chunk.js",
+    "static/css/main.7a203b56.chunk.css",
+    "static/js/main.7cef46b6.chunk.js"
+  ]
+}
