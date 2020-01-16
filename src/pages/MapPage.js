@@ -1,7 +1,3 @@
-import React, {useEffect, useState, useRef} from 'react';
-import {featureLayer, query} from 'esri-leaflet';
-import {geosearch} from 'esri-leaflet-geocoder';
-import FeatureDetails from '../components/FeatureDetails';
 import {
   Map,
   Marker,
@@ -10,6 +6,13 @@ import {
   GeoJSON,
   WMSTileLayer,
 } from 'react-leaflet';
+import 'leaflet.markercluster';
+import React, {useEffect, useState, useRef} from 'react';
+import {featureLayer, query} from 'esri-leaflet';
+import {geosearch} from 'esri-leaflet-geocoder';
+import {featureLayer as clusterLayer} from 'esri-leaflet-cluster';
+import FeatureDetails from '../components/FeatureDetails';
+
 
 export default function MapPage() {
   const position = [41.850033, -100.6500523];
@@ -19,9 +22,13 @@ export default function MapPage() {
   const map = useRef();
   const triUrl =
     'https://geodata.epa.gov/arcgis/rest/services/OEI/FRS_INTERESTS/MapServer/23';
-  const triLayer = featureLayer({
+  const triClusterLayer = clusterLayer({
     url: triUrl,
+    simplifyFactor: 10
   });
+  const triLayer = featureLayer({
+    url: triUrl
+  })
 
   useEffect(() => {
     if (map) {
@@ -30,10 +37,12 @@ export default function MapPage() {
         useMapBounds: false,
         expanded: true,
       }).addTo(map.current.leafletElement);
-      triLayer.addTo(map.current.leafletElement);
+      triClusterLayer.addTo(map.current.leafletElement);
       //Click Identify Logic for TRI features
 
-      map.current.leafletElement.on('click', evt => {
+      triClusterLayer.on('click', evt => {
+        console.log('caught click event....')
+        /*
         var qry = query({
           url: triUrl,
         })
@@ -48,6 +57,7 @@ export default function MapPage() {
               setSelectedFeature(featureCollection.features[0]);
             }
           });
+          */
       });
     }
   }, [map]);
@@ -58,6 +68,7 @@ export default function MapPage() {
         style={{width: '100%', height: '100%'}}
         center={position}
         zoom={8}
+        maxZoom={15}
         ref={map}>
         <TileLayer
           url="https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw"
