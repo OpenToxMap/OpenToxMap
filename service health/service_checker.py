@@ -20,13 +20,9 @@
 
 import datetime
 import json
+import smtplib
 import urllib.request
 
-import smtplib
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
-from email.mime.base import MIMEBase
-from email import encoders
 
 # JSON file path
 file_path = 'map_services.json'
@@ -37,7 +33,7 @@ send_email = True
 # Array to hold bad services for emailing the admins
 badServices = []
 # From Email address and password
-from_email = 'you@email.com'
+from_email = 'you@gmail.com'
 pswd = 'strong_password'
 
 def test_rest(baseURL):
