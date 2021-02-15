@@ -1618,9 +1618,9 @@ acorn-walk@^6.0.1:
   integrity sha512-7evsyfH1cLOCdAzZAd43Cic04yKydNx0cF+7tiA19p1XnLLPU4dpCQOqpjqwokFe//vS0QqfqqjCS2JkiIs0cA==
 
 acorn@^5.5.3:
-  version "5.7.3"
-  resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.7.3.tgz#67aa231bf8812974b85235a96771eb6bd07ea279"
-  integrity sha512-T/zvzYRfbVojPWahDsE5evJdHb3oJoQfFbsrKM7w5Zcs++Tr257tia3BmMP8XYVjp1S9RZXQMh7gao96BlqZOw==
+  version "5.7.4"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.7.4.tgz#3e8d8a9947d0599a1796d10225d7432f4a4acf5e"
+  integrity sha512-1D++VG7BhrtvQpNbBzovKNc1FLGGEE/oGe7b9xJm/RFHMBeUaUGpluV9RLjZa47YFdPcDAenEYuq9pQPcMdLJg==
 
 acorn@^6.0.1, acorn@^6.0.4, acorn@^6.2.1:
   version "6.4.0"
@@ -3992,6 +3992,15 @@ esrecurse@^4.1.0:
   dependencies:
     estraverse "^4.1.0"
 
+esri-leaflet-cluster@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/esri-leaflet-cluster/-/esri-leaflet-cluster-2.0.1.tgz#d8d8dc8cd2817defe7583523af8fb7c0024c8c7a"
+  integrity sha512-xM2EAecHAQ5vxLg0YdxWXD9XIWHbmpQTSLPqfb76cf65mCcpQASeHo3jKxr1Pc7FCPCxSN197wec1wvbbrsSCQ==
+  dependencies:
+    esri-leaflet "^2.0.0"
+    leaflet "^1.0.0"
+    leaflet.markercluster "^1.0.0"
+
 esri-leaflet-geocoder@^2.3.2:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/esri-leaflet-geocoder/-/esri-leaflet-geocoder-2.3.2.tgz#d745b9c87c4487e93cd675ca78c1d3b73ea9a9f0"
@@ -3999,6 +4008,15 @@ esri-leaflet-geocoder@^2.3.2:
   dependencies:
     esri-leaflet "^2.1.4"
     leaflet "^1.0.0"
+
+esri-leaflet@^2.0.0:
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/esri-leaflet/-/esri-leaflet-2.3.3.tgz#fe0ae7b4ddd7ad3d0b552093c2d7ad4557c8bc4a"
+  integrity sha512-cGR82DNsIUHhnRxKARGCQZB5KZGZ/axX9AVuDrl4Vj7td+VmRvULIReNlFA01wTeCX86k5VH4f5MTrqzjqHfOg==
+  dependencies:
+    "@esri/arcgis-to-geojson-utils" "^1.3.0"
+    leaflet-virtual-grid "^1.0.7"
+    tiny-binary-search "^1.0.3"
 
 esri-leaflet@^2.1.4, esri-leaflet@^2.3.2:
   version "2.3.2"
@@ -6323,6 +6341,11 @@ leaflet-virtual-grid@^1.0.7:
   integrity sha512-sJxWYPcIKwMTewE+z8OFzfZHsbZcniQgTcreVdIQnxSRf+1XpMp+c4QKAWRKTBRmWOhEGyQO0Z90CLANJ9jRUQ==
   dependencies:
     leaflet "^1.0.0"
+
+leaflet.markercluster@^1.0.0:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/leaflet.markercluster/-/leaflet.markercluster-1.4.1.tgz#b53f2c4f2ca7306ddab1dbb6f1861d5e8aa6c5e5"
+  integrity sha512-ZSEpE/EFApR0bJ1w/dUGwTSUvWlpalKqIzkaYdYB7jaftQA/Y2Jav+eT4CMtEYFj+ZK4mswP13Q2acnPBnhGOw==
 
 leaflet@^1.0.0, leaflet@^1.6.0:
   version "1.6.0"
