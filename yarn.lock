@@ -1192,6 +1192,18 @@
     "@svgr/plugin-svgo" "^4.3.1"
     loader-utils "^1.2.3"
 
+"@terraformer/arcgis@^2.0.7":
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/@terraformer/arcgis/-/arcgis-2.0.7.tgz#617e6056a64b7328d4827702d64d0ccfc2e96d17"
+  integrity sha512-7jIQcnd8RnKsDt1IxmEjq9t7l5fnf0e5c+c1+1GjG4NR+TY0XkJcWtrBv0DWd65uAlDiQYMlEG8ls5dz1GQiuA==
+  dependencies:
+    "@terraformer/common" "^2.0.7"
+
+"@terraformer/common@^2.0.7":
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/@terraformer/common/-/common-2.0.7.tgz#bec626f331b9f0cc3aefb16f9f88e2d3684107ff"
+  integrity sha512-8bl+/JT0Rw6FYe2H3FfJS8uQwgzGl+UHs+8JX0TQLHgA4sMDEwObbMwo0iP3FVONwPXrPHEpC5YH7Grve0cl9A==
+
 "@testing-library/dom@^6.11.0":
   version "6.11.0"
   resolved "https://registry.yarnpkg.com/@testing-library/dom/-/dom-6.11.0.tgz#962a38f1a721fdb7c9e35e7579e33ff13a00eda4"
@@ -2180,10 +2192,10 @@ bluebird@^3.5.5:
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.7.2.tgz#9f229c15be272454ffa973ace0dbee79a1b0c36f"
   integrity sha512-XpNj6GDQzdfW+r2Wnn7xiSAd7TM3jzkxGXBGTtWKuSXv1xUV+azxAm8jdWZN06QTQk+2N2XB9jRDkvbmQmcRtg==
 
-bn.js@^4.0.0, bn.js@^4.1.0, bn.js@^4.1.1, bn.js@^4.4.0:
-  version "4.11.8"
-  resolved "https://registry.yarnpkg.com/bn.js/-/bn.js-4.11.8.tgz#2cde09eb5ee341f484746bb0309b3253b1b1442f"
-  integrity sha512-ItfYfPLkWHUjckQCk8xC+LwxgK8NYcXywGigJgSwOP8Y2iyWT4f2vsZnoOXTTbo+o5yXmIUJ4gn5538SO5S3gA==
+bn.js@^4.0.0, bn.js@^4.1.0, bn.js@^4.1.1, bn.js@^4.11.9:
+  version "4.12.0"
+  resolved "https://registry.yarnpkg.com/bn.js/-/bn.js-4.12.0.tgz#775b3f278efbb9718eec7361f483fb36fbbfea88"
+  integrity sha512-c98Bf3tPniI+scsdk237ku1Dc3ujXQTSgyiPUDEOe7tRkhrqridvh8klBv0HCEso1OLOYcHuCv/cS6DNxKH+ZA==
 
 body-parser@1.19.0:
   version "1.19.0"
@@ -2242,7 +2254,7 @@ braces@^2.3.1, braces@^2.3.2:
     split-string "^3.0.2"
     to-regex "^3.0.1"
 
-brorand@^1.0.1:
+brorand@^1.0.1, brorand@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/brorand/-/brorand-1.1.0.tgz#12c25efe40a45e3c323eb8675a0a0ce57b22371f"
   integrity sha1-EsJe/kCkXjwyPrhnWgoM5XsiNx8=
@@ -3645,17 +3657,17 @@ electron-to-chromium@^1.3.317:
   integrity sha512-Tc8JQEfGQ1MzfSzI/bTlSr7btJv/FFO7Yh6tanqVmIWOuNCu6/D1MilIEgLtmWqIrsv+o4IjpLAhgMBr/ncNAA==
 
 elliptic@^6.0.0:
-  version "6.5.2"
-  resolved "https://registry.yarnpkg.com/elliptic/-/elliptic-6.5.2.tgz#05c5678d7173c049d8ca433552224a495d0e3762"
-  integrity sha512-f4x70okzZbIQl/NSRLkI/+tteV/9WqL98zx+SQ69KbXxmVrmjwsNUPn/gYJJ0sHvEak24cZgHIPegRePAtA/xw==
+  version "6.5.4"
+  resolved "https://registry.yarnpkg.com/elliptic/-/elliptic-6.5.4.tgz#da37cebd31e79a1367e941b592ed1fbebd58abbb"
+  integrity sha512-iLhC6ULemrljPZb+QutR5TQGB+pdW6KGD5RSegS+8sorOZT+rdQFbsQFJgvN3eRqNALqJer4oQ16YvJHlU8hzQ==
   dependencies:
-    bn.js "^4.4.0"
-    brorand "^1.0.1"
+    bn.js "^4.11.9"
+    brorand "^1.1.0"
     hash.js "^1.0.0"
-    hmac-drbg "^1.0.0"
-    inherits "^2.0.1"
-    minimalistic-assert "^1.0.0"
-    minimalistic-crypto-utils "^1.0.0"
+    hmac-drbg "^1.0.1"
+    inherits "^2.0.4"
+    minimalistic-assert "^1.0.1"
+    minimalistic-crypto-utils "^1.0.1"
 
 email-addresses@^3.0.1:
   version "3.1.0"
@@ -3992,6 +4004,15 @@ esrecurse@^4.1.0:
   dependencies:
     estraverse "^4.1.0"
 
+esri-leaflet-cluster@^2.0.1:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/esri-leaflet-cluster/-/esri-leaflet-cluster-2.1.0.tgz#30f5104c8768c5d9d6a2015c870bb1b7da9bc9be"
+  integrity sha512-q07BHPXkluyb8STt/2m2spSecBiZj/Eqaiab8J14mlJ9RxAF11HthDb/09UOiJTmbpgvLUV1nPs2l7dKyY7xqg==
+  dependencies:
+    esri-leaflet "^2.0.0"
+    leaflet "^1.0.0"
+    leaflet.markercluster "^1.0.0"
+
 esri-leaflet-geocoder@^2.3.2:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/esri-leaflet-geocoder/-/esri-leaflet-geocoder-2.3.2.tgz#d745b9c87c4487e93cd675ca78c1d3b73ea9a9f0"
@@ -3999,6 +4020,14 @@ esri-leaflet-geocoder@^2.3.2:
   dependencies:
     esri-leaflet "^2.1.4"
     leaflet "^1.0.0"
+
+esri-leaflet@^2.0.0:
+  version "2.5.3"
+  resolved "https://registry.yarnpkg.com/esri-leaflet/-/esri-leaflet-2.5.3.tgz#ccf0c7463c7f9b6dfe27aab478740c3dbd8fe25b"
+  integrity sha512-zapunrhhhKyiVP5NCSfFjD7YqWYYYD3OONVjBFWZgX2KbD6ssUQ3KnXVo2U0hswWfJDIoHF7g9PLZ4rDNuQnvA==
+  dependencies:
+    "@terraformer/arcgis" "^2.0.7"
+    tiny-binary-search "^1.0.3"
 
 esri-leaflet@^2.1.4, esri-leaflet@^2.3.2:
   version "2.3.2"
@@ -4900,7 +4929,7 @@ history@^4.9.0:
     tiny-warning "^1.0.0"
     value-equal "^1.0.1"
 
-hmac-drbg@^1.0.0:
+hmac-drbg@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/hmac-drbg/-/hmac-drbg-1.0.1.tgz#d2745701025a6c775a6c545793ed502fc0c649a1"
   integrity sha1-0nRXAQJabHdabFRXk+1QL8DGSaE=
@@ -5209,7 +5238,7 @@ inflight@^1.0.4:
     once "^1.3.0"
     wrappy "1"
 
-inherits@2, inherits@2.0.4, inherits@^2.0.1, inherits@^2.0.3, inherits@~2.0.0, inherits@~2.0.1, inherits@~2.0.3:
+inherits@2, inherits@2.0.4, inherits@^2.0.1, inherits@^2.0.3, inherits@^2.0.4, inherits@~2.0.0, inherits@~2.0.1, inherits@~2.0.3:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/inherits/-/inherits-2.0.4.tgz#0fa2c64f932917c3433a0ded55363aae37416b7c"
   integrity sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==
@@ -6324,6 +6353,11 @@ leaflet-virtual-grid@^1.0.7:
   dependencies:
     leaflet "^1.0.0"
 
+leaflet.markercluster@^1.0.0:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/leaflet.markercluster/-/leaflet.markercluster-1.4.1.tgz#b53f2c4f2ca7306ddab1dbb6f1861d5e8aa6c5e5"
+  integrity sha512-ZSEpE/EFApR0bJ1w/dUGwTSUvWlpalKqIzkaYdYB7jaftQA/Y2Jav+eT4CMtEYFj+ZK4mswP13Q2acnPBnhGOw==
+
 leaflet@^1.0.0, leaflet@^1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/leaflet/-/leaflet-1.6.0.tgz#aecbb044b949ec29469eeb31c77a88e2f448f308"
@@ -6746,7 +6780,7 @@ minimalistic-assert@^1.0.0, minimalistic-assert@^1.0.1:
   resolved "https://registry.yarnpkg.com/minimalistic-assert/-/minimalistic-assert-1.0.1.tgz#2e194de044626d4a10e7f7fbc00ce73e83e4d5c7"
   integrity sha512-UtJcAD4yEaGtjPezWuO9wC4nwUnVH/8/Im3yEHQP4b67cXlD/Qr9hdITCU1xDbSEXg2XKNaP8jsReV7vQd00/A==
 
-minimalistic-crypto-utils@^1.0.0, minimalistic-crypto-utils@^1.0.1:
+minimalistic-crypto-utils@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/minimalistic-crypto-utils/-/minimalistic-crypto-utils-1.0.1.tgz#f6c00c1c0b082246e5c4d99dfb8c7c083b2b582a"
   integrity sha1-9sAMHAsIIkblxNmd+4x8CDsrWCo=
