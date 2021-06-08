@@ -1192,6 +1192,18 @@
     "@svgr/plugin-svgo" "^4.3.1"
     loader-utils "^1.2.3"
 
+"@terraformer/arcgis@^2.0.7":
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/@terraformer/arcgis/-/arcgis-2.0.7.tgz#617e6056a64b7328d4827702d64d0ccfc2e96d17"
+  integrity sha512-7jIQcnd8RnKsDt1IxmEjq9t7l5fnf0e5c+c1+1GjG4NR+TY0XkJcWtrBv0DWd65uAlDiQYMlEG8ls5dz1GQiuA==
+  dependencies:
+    "@terraformer/common" "^2.0.7"
+
+"@terraformer/common@^2.0.7":
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/@terraformer/common/-/common-2.0.7.tgz#bec626f331b9f0cc3aefb16f9f88e2d3684107ff"
+  integrity sha512-8bl+/JT0Rw6FYe2H3FfJS8uQwgzGl+UHs+8JX0TQLHgA4sMDEwObbMwo0iP3FVONwPXrPHEpC5YH7Grve0cl9A==
+
 "@testing-library/dom@^6.11.0":
   version "6.11.0"
   resolved "https://registry.yarnpkg.com/@testing-library/dom/-/dom-6.11.0.tgz#962a38f1a721fdb7c9e35e7579e33ff13a00eda4"
@@ -3992,6 +4004,15 @@ esrecurse@^4.1.0:
   dependencies:
     estraverse "^4.1.0"
 
+esri-leaflet-cluster@^2.0.1:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/esri-leaflet-cluster/-/esri-leaflet-cluster-2.1.0.tgz#30f5104c8768c5d9d6a2015c870bb1b7da9bc9be"
+  integrity sha512-q07BHPXkluyb8STt/2m2spSecBiZj/Eqaiab8J14mlJ9RxAF11HthDb/09UOiJTmbpgvLUV1nPs2l7dKyY7xqg==
+  dependencies:
+    esri-leaflet "^2.0.0"
+    leaflet "^1.0.0"
+    leaflet.markercluster "^1.0.0"
+
 esri-leaflet-geocoder@^2.3.2:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/esri-leaflet-geocoder/-/esri-leaflet-geocoder-2.3.2.tgz#d745b9c87c4487e93cd675ca78c1d3b73ea9a9f0"
@@ -3999,6 +4020,14 @@ esri-leaflet-geocoder@^2.3.2:
   dependencies:
     esri-leaflet "^2.1.4"
     leaflet "^1.0.0"
+
+esri-leaflet@^2.0.0:
+  version "2.5.3"
+  resolved "https://registry.yarnpkg.com/esri-leaflet/-/esri-leaflet-2.5.3.tgz#ccf0c7463c7f9b6dfe27aab478740c3dbd8fe25b"
+  integrity sha512-zapunrhhhKyiVP5NCSfFjD7YqWYYYD3OONVjBFWZgX2KbD6ssUQ3KnXVo2U0hswWfJDIoHF7g9PLZ4rDNuQnvA==
+  dependencies:
+    "@terraformer/arcgis" "^2.0.7"
+    tiny-binary-search "^1.0.3"
 
 esri-leaflet@^2.1.4, esri-leaflet@^2.3.2:
   version "2.3.2"
@@ -6324,6 +6353,11 @@ leaflet-virtual-grid@^1.0.7:
   dependencies:
     leaflet "^1.0.0"
 
+leaflet.markercluster@^1.0.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/leaflet.markercluster/-/leaflet.markercluster-1.5.0.tgz#54db42485da32fc3d92c7ae22d0d7982879e0b67"
+  integrity sha512-Fvf/cq4o806mJL50n+fZW9+QALDDLPvt7vuAjlD2vfnxx3srMDs2vWINJze4nKYJYRY45OC6tM/669C3pLwMCA==
+
 leaflet@^1.0.0, leaflet@^1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/leaflet/-/leaflet-1.6.0.tgz#aecbb044b949ec29469eeb31c77a88e2f448f308"
@@ -6625,9 +6659,9 @@ meow@^3.7.0:
     trim-newlines "^1.0.0"
 
 merge-deep@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/merge-deep/-/merge-deep-3.0.2.tgz#f39fa100a4f1bd34ff29f7d2bf4508fbb8d83ad2"
-  integrity sha512-T7qC8kg4Zoti1cFd8Cr0M+qaZfOwjlPDEdZIIPPB2JZctjaPM4fX+i7HOId69tAti2fvO6X5ldfYUONDODsrkA==
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/merge-deep/-/merge-deep-3.0.3.tgz#1a2b2ae926da8b2ae93a0ac15d90cd1922766003"
+  integrity sha512-qtmzAS6t6grwEkNrunqTBdn0qKwFgNWvlxUbAV8es9M7Ot1EbyApytCnvE0jALPa46ZpKDUo527kKiaWplmlFA==
   dependencies:
     arr-union "^3.1.0"
     clone-deep "^0.2.4"
